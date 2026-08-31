@@ -24,8 +24,8 @@
     </nav>
     </header>
     
-    <main class="content-wrapper">
-      <div class="hero">
+    <main>
+      <section class="hero-full">
         <div class="hero-content">
           <div class="hero-left">
             <h2>Selamat Datang di Portal BPS<br>Provinsi Sulawesi Tengah</h2>
@@ -36,7 +36,7 @@
             </p>
           </div>
           <div class="hero-right">
-            <div class="hero-visual">
+            <div class="maskot-wrapper">
               <img src="aset/maskot_sensus.png" alt="Maskot Sensus">
             </div>
           </div>
@@ -56,7 +56,7 @@
           </div>
           <a href="https://sulteng.bps.go.id" target="_blank">Kunjungi Website Resmi</a>
         </div>
-      </div>
+      </section>
     </main>
     
     <address>
