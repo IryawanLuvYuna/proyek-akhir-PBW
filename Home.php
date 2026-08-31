@@ -41,21 +41,21 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="about-strip">
-        <div class="about-strip-text">
-          <h3>Tentang BPS Provinsi Sulawesi Tengah</h3>
-          <p>
-            BPS adalah lembaga pemerintah non-kementerian yang bertugas
-            menyelenggarakan kegiatan statistik sesuai peraturan perundang-undangan.
-            Data kami menjadi acuan perencanaan dan evaluasi pembangunan di Sulawesi Tengah.
-          </p>
+        <div class="hero-bottom">
+          <div class="about-strip-text">
+            <h3>Tentang BPS Provinsi Sulawesi Tengah</h3>
+            <p>
+              BPS adalah lembaga pemerintah non-kementerian yang bertugas
+              menyelenggarakan kegiatan statistik sesuai peraturan perundang-undangan.
+              Data kami menjadi acuan perencanaan dan evaluasi pembangunan di Sulawesi Tengah.
+            </p>
+          </div>
+          <div class="about-strip-visual">
+            <img src="aset/logo-footer.png" alt="logo berAKHLAK">
+          </div>
+          <a href="https://sulteng.bps.go.id" target="_blank">Kunjungi Website Resmi</a>
         </div>
-        <div class="about-strip-visual">
-          <img src="aset/logo-footer.png" alt="logo berAKHLAK">
-        </div>
-        <a href="https://sulteng.bps.go.id" target="_blank">Kunjungi Website Resmi</a>
       </div>
     </main>
     
