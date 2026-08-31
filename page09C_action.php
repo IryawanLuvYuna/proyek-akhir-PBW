@@ -1,4 +1,4 @@
-<!-- PAGE UNTUK LOGIKA INSERT -->
+<!-- LOGIKA INSERT -->
 <?php
   include 'dbconn.php';
   try {

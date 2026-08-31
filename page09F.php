@@ -1,4 +1,4 @@
-<!-- PAGE UNTUK LOGIKA DELETE -->
+<!-- LOGIKA DELETE -->
 <?php
   include 'dbconn.php';
   try {

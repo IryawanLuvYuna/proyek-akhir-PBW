@@ -1,3 +1,4 @@
+// LOGIKA UTK VALIDASI FORM TAMBAH DAN EDIT PUBLIKASI
 function validate09C() {
   const nomor = document.forms["formPublikasi"]["nomor"].value;
   const judul = document.forms["formPublikasi"]["judul"].value;
