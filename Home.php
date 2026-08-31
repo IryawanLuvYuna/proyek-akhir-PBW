@@ -28,7 +28,6 @@
       <div class="hero">
         <div class="hero-content">
           <div class="hero-left">
-            <div class="hero-tagline">Portal Resmi</div>
             <h2>Selamat Datang di Portal BPS<br>Provinsi Sulawesi Tengah</h2>
             <p>
               Badan Pusat Statistik (BPS) Provinsi Sulawesi Tengah menyediakan data
