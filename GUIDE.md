@@ -1,7 +1,5 @@
 # Panduan & Dokumentasi Proyek Website
 
-> **Catatan untuk kamu (developer):** Bagian yang bertanda `[ISI: ...]` wajib diisi sesuai kondisi proyek kamu sebelum file ini dipakai oleh Devin. Semakin detail, semakin kecil kemungkinan Devin salah asumsi.
-
 ## 1. Ringkasan Proyek
 Website ini adalah aplikasi web sederhana yang terhubung ke database MySQL (phpMyAdmin) menggunakan PHP. Saat ini proyek dalam tahap pengembangan awal (versi dasar), belum production-ready.
 

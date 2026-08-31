@@ -26,12 +26,22 @@
     
     <main class="content-wrapper">
       <div class="hero">
-        <h2>Selamat Datang di Portal BPS<br>Provinsi Sulawesi Tengah</h2>
-        <p>
-          Badan Pusat Statistik (BPS) Provinsi Sulawesi Tengah menyediakan data
-          statistik yang akurat, terpercaya, dan terkini untuk mendukung
-          pembangunan daerah dan pengambilan keputusan berbasis data.
-        </p>
+        <div class="hero-content">
+          <div class="hero-left">
+            <div class="hero-tagline">Portal Resmi</div>
+            <h2>Selamat Datang di Portal BPS<br>Provinsi Sulawesi Tengah</h2>
+            <p>
+              Badan Pusat Statistik (BPS) Provinsi Sulawesi Tengah menyediakan data
+              statistik yang akurat, terpercaya, dan terkini untuk mendukung
+              pembangunan daerah dan pengambilan keputusan berbasis data.
+            </p>
+          </div>
+          <div class="hero-right">
+            <div class="hero-visual">
+              <img src="aset/maskot_sensus.png" alt="Maskot Sensus">
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="about-strip">
@@ -42,6 +52,8 @@
             menyelenggarakan kegiatan statistik sesuai peraturan perundang-undangan.
             Data kami menjadi acuan perencanaan dan evaluasi pembangunan di Sulawesi Tengah.
           </p>
+        </div>
+        <div class="about-strip-visual">
           <img src="aset/logo-footer.png" alt="logo berAKHLAK">
         </div>
         <a href="https://sulteng.bps.go.id" target="_blank">Kunjungi Website Resmi</a>

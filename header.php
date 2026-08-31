@@ -13,10 +13,10 @@
     </div>
 
       <nav>
-        <a href="Home.html">Home</a>
-        <a class="active" href="Page03A.html">Daftar Publikasi</a>
-        <a href="php09R.html">Tambah Publikasi</a>
-        <a href="php09S.html">Galeri Kegiatan</a>
+        <a href="Home.php">Home</a>
+        <a href="page09A.php">Daftar Publikasi</a>
+        <a href="page09C.php">Tambah Publikasi</a>
+        <a href="galeri.php">Galeri Kegiatan</a>
         <a href="page10B.php">Logout</a>
       </nav>
     </header>
