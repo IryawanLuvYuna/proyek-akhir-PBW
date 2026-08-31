@@ -230,7 +230,7 @@ nav a.active {
 }
 
 main {
-  padding-top: 70px;
+  padding-top: 80px;
   width: 100%;
   margin: 0 auto;
 }
@@ -388,7 +388,8 @@ address a:hover {
   padding: 0;
   text-align: left;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
+  isolation: isolate;
   z-index: 1;
   width: 100%;
   min-height: 600px;
@@ -431,7 +432,7 @@ address a:hover {
   position: relative;
   z-index: 2;
   align-items: center;
-  padding: var(--spacing-2xl) 20px;
+  padding: calc(var(--spacing-2xl) + 24px) 20px var(--spacing-2xl);
   flex: 1;
 }
 
@@ -477,8 +478,8 @@ address a:hover {
 }
 
 .hero-bottom {
-  background: rgba(0, 40, 90, 0.4);
-  backdrop-filter: blur(10px);
+  background: rgba(0, 40, 90, 0.55);
+  backdrop-filter: blur(12px);
   padding: var(--spacing-xl) 20px;
   display: flex;
   align-items: center;
@@ -489,7 +490,8 @@ address a:hover {
   margin: 0 auto;
   position: relative;
   z-index: 2;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 -12px 24px -12px rgba(0, 0, 0, 0.35);
 }
 
 .hero-bottom .about-strip-text h3 {
@@ -556,30 +558,51 @@ address a:hover {
 
 .maskot-wrapper {
   width: 100%;
-  max-width: 450px;
-  height: 320px;
+  max-width: 420px;
+  height: 300px;
+  margin-top: 20px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xl);
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   padding: var(--spacing-lg);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;
   overflow: visible;
+  animation: maskotPopIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
 .maskot-wrapper img {
-  width: 100%;
+  width: 180%;
+  max-width: 200%;
   height: auto;
+  max-height: 320px;
   border-radius: var(--radius-md);
   object-fit: contain;
-  position: absolute;
-  bottom: 0;
-  transform: translateY(-35%);
-  max-height: 480px;
+  position: relative;
+  transform: translateY(6%);
+  filter: drop-shadow(0 18px 20px rgba(0, 0, 0, 0.35));
+  animation: maskotFloat 4s ease-in-out infinite;
+  animation-delay: 0.7s;
+}
+
+@keyframes maskotPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.75) translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes maskotFloat {
+  0%, 100% { transform: translateY(6%); }
+  50% { transform: translateY(0%); }
 }
 
 .about-strip {
@@ -1017,16 +1040,6 @@ address a:hover {
   
   .hero-bottom img {
     width: 160px;
-  }
-  
-  nav a {
-  
-  .hero h2 {
-    font-size: 1.5rem;
-  }
-  
-  .hero p {
-    font-size: 0.9rem;
   }
   
   nav a {
