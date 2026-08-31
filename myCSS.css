@@ -1,0 +1,419 @@
+/* Reset padding dan margin bawaan browser*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 5px;
+}
+
+td, th {
+  padding: 0 0.5em;
+}
+
+th {
+  background-color: #034ea2;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+}
+
+td {
+  text-align: center;
+  font-size: larger;
+}
+
+tr:nth-child(even) {
+  background-color: #F2F2F2;
+}
+
+.form-publikasi {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.form-publikasi form {
+  background-color: #f2f2f2;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.form-publikasi table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.form-publikasi td {
+  padding: 10px;
+}
+
+.form-publikasi td:first-child {
+  width: 30%;
+  text-align: right; 
+  font-weight: bold;
+}
+
+.form-publikasi input[type="text"],
+.form-publikasi input[type="date"],
+.form-publikasi input[type="number"],
+.form-publikasi input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  box-sizing: border-box; 
+}
+
+.form-publikasi input[type="submit"] {
+  width: auto;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: #034f84;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+header {
+  background-color: #034ea2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 60px;
+  box-sizing: border-box;
+  padding: 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.header-left{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+header img {
+  height: 48px;
+  margin-left: 4px;
+  width: auto;
+}
+
+.judulweb {
+  color: white;
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+
+nav a {
+  display: flex;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  padding: 0px 15px;
+  height: 60px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a:hover {
+  background-color: #0260c4;
+  color: white;
+}
+
+nav a.active {
+  background-color: #888888;
+  color: black;
+}
+
+main {
+  padding-top: 70px;
+  width: 75%;
+  margin: 0 auto;
+}
+
+hr {
+  margin-top: 40px;
+  border: 1px solid #ccc;
+}
+
+.gallery-section {
+  padding: 80px 30px 30px 30px;
+  max-width: 860px;         
+  margin: 0 auto;
+}
+
+.gallery-section h2 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  color: #003366;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;   /* dari atas ke bawah */
+  height: 100vh;             
+  gap: 12px;
+  background: #ffffff;
+  border-radius: 7px;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.gallery-preview {
+  flex: 2;                  
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+.gallery-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* auto-crop spy gambar pas */
+  object-position: center;
+  display: block;
+  transition: opacity 0.4s ease;
+}
+
+.gallery-thumbnails {
+  flex: 1;                  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 kolom */
+  grid-template-rows: repeat(2, 1fr);     /* 2 baris */
+  gap: 8px;
+}
+
+.gallery-thumbnails img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* auto-crop spy gambar pas */
+  object-position: center;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  border: 2px solid transparent;
+  display: block;
+  border: 1px solid black;
+}
+
+.gallery-thumbnails img:hover {
+  opacity: 0.6;
+  transform: scale(1.03);
+}
+
+.gallery-thumbnails img.active {
+  opacity: 0.6;
+  border: 1px solid #003366;
+}
+
+address {
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  background-color: #003366;
+  color: white;
+  padding: 15px;
+  width: 100%;
+}
+
+address a {
+  color: #aad4ff;
+}
+
+.divError {
+  width: 90%;
+  max-width: 600px;
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 1px solid red;
+  border-radius: 4px;
+  padding: 15px;
+  display: none;       /* Default tersembunyi */
+  align-items: center;
+  gap: 10px;
+  color: #990000;
+  font-weight: bold;
+}
+
+.form-wrapper {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  width: 100%;
+  padding-top: 80px;      
+}
+
+#pesanError {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #034ea2 0%, #012f6b 60%, #001a3d 100%);
+  color: white;
+  margin-top: 40px;
+  padding: 60px 40px 126px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -60px; left: -60px;
+  width: 320px; height: 320px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 50%;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -80px; right: -40px;
+  width: 260px; height: 260px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 50%;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  font-family: Arial, sans-serif;
+}
+
+.hero p {
+  font-size: 1rem;
+  max-width: 640px;
+  margin: 0 auto 28px auto;
+  line-height: 1.7;
+  color: #cce0ff;
+  font-family: Arial, sans-serif;
+}
+
+.about-strip {
+  background: linear-gradient(90deg, #034ea2 0%, #0260c4 100%);
+  color: white;
+  padding: 24px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 0px;
+}
+
+.about-strip img{
+  width: 40%;
+  height: auto;
+}
+
+.about-strip-text h3 {
+  font-size: 1.15rem;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.about-strip-text p {
+  font-size: 0.88rem;
+  font-family: Arial, sans-serif;
+  color: #cce0ff;
+  max-width: 520px;
+  line-height: 1.65;
+}
+
+.about-strip a {
+  display: inline-block;
+  background: white;
+  color: #034ea2;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 10px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.about-strip a:hover {
+  background: #cce0ff;
+}
+
+.table-sampul {
+  width: 100% !important;
+  border-collapse: collapse;
+  margin: 0;
+  background: transparent;
+}
+
+.table-sampul td {
+  padding: 6px 0;
+  text-align: left;
+  font-size: 14px;
+}
+
+.table-sampul td.label-sampul {
+  text-align: left;
+  font-weight: normal;
+  color: #555;
+}
+
+.table-sampul input[type="file"] {
+  width: auto; 
+  padding: 5px 0;
+  border: none; /* Menghapus kotak border luar*/
+}
+
+.img-sampul-lama {
+  width: 120px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3px;
+  background: white;
+  display: block;
+}
+
+.input-readonly {
+  background-color: #fff5f5;
+  color: red;
+  border: 1px solid #ffa3a3 !important;
+  cursor: not-allowed;
+}
