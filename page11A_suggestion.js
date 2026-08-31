@@ -1,3 +1,4 @@
+// LOGIKA SUGGESTION
 function showHint(str) {
   if (str.length == 0) {
     // Code 4a: Menghapus konten pada elemen txtHint dan keluar dari fungsi

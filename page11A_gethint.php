@@ -1,3 +1,4 @@
+<!-- LOGIKA UTK AMBIL JUDUL DARI DATABASE -->
 <?php
   include 'dbconn.php';
   try {
@@ -10,7 +11,7 @@
     $stmt->execute(["%" . $keyword . "%"]);
 
     // lookup all hints if query result is not empty
-    $hint = "";
+    /*$hint = "";
     if ($stmt) {
       foreach($stmt as $row) {
         if ($hint === "") {
@@ -22,9 +23,18 @@
     }
 
     // Output "no suggestion" if no hint was found or output correct values
-    echo $hint === "" ? "no suggestion" : $hint;
-    $pdo = NULL;
+    echo $hint === "" ? "no suggestion" : $hint;*/
 
+    // Kalau mau Suggestionnya dalam format JSON
+    if ($stmt) {
+      echo json_encode($stmt);
+    }
+    else {
+      // Output "no suggestion" if no hint was found or output correct values
+      $response[] = array('judul'=>'no suggestion');
+      echo json_encode($response);
+    }
+    $pdo = NULL;
     
   }
   catch (PDOException $e) {

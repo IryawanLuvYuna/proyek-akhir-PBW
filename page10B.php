@@ -1,3 +1,4 @@
+<!-- LOGIKA LOGOUT -->
 <?php
   // 1. Inisialisasi/Hubungkan dengan session yang sedang aktif
   session_start();
