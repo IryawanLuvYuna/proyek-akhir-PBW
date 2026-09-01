@@ -1393,10 +1393,13 @@ address a:hover {
 .toast-container {
   position: fixed;
   top: 80px;
-  right: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  right: auto;
   z-index: 9999;
   display: flex;
   flex-direction: column;
+  align-items: center;      /* biar tiap toast tetap center kalau ada beberapa */
   gap: var(--spacing-sm);
   pointer-events: none;
 }
@@ -1470,25 +1473,13 @@ address a:hover {
 }
 
 @keyframes toastSlideIn {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes toastSlideOut {
-  from {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(100%);
-    opacity: 0;
-  }
+  from { transform: translateY(0); opacity: 1; }
+  to   { transform: translateY(-100%); opacity: 0; }
 }
 
 /* Toast Responsive */
