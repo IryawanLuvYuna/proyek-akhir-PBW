@@ -567,7 +567,7 @@ address a:hover {
   box-shadow: var(--shadow-xl);
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
-  padding: var(--spacing-lg);
+  padding: var(--spacing-lg) var(--spacing-lg) 0;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -578,14 +578,16 @@ address a:hover {
 }
 
 .maskot-wrapper img {
-  width: 180%;
-  max-width: 200%;
+  width: 80%;
+  max-width: none;
   height: auto;
-  max-height: 320px;
+  max-height: none;
   border-radius: var(--radius-md);
   object-fit: contain;
-  position: relative;
-  transform: translateY(6%);
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
   filter: drop-shadow(0 18px 20px rgba(0, 0, 0, 0.35));
   animation: maskotFloat 4s ease-in-out infinite;
   animation-delay: 0.7s;
@@ -603,8 +605,8 @@ address a:hover {
 }
 
 @keyframes maskotFloat {
-  0%, 100% { transform: translateY(6%); }
-  50% { transform: translateY(0%); }
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -10px); }
 }
 
 .about-strip {
