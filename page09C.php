@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="myCSS.css">
     <script src="validasiForm.js"></script>
   </head>
-  <body>
+  <body class="form-page">
 
     <header>
     <div class="header-left">
@@ -24,45 +24,53 @@
       </nav>
     </header>
 
-    <div class="form-wrapper">
-      <div class="divError">  
-        <p id="pesanError"></p>
+    <div class="form-page-container">
+      <div class="form-content">
+        <div class="form-card">
+          <div class="form-header">
+            <h2 class="form-title">Form Tambah Publikasi Baru</h2>
+          </div>
+
+          <div class="divError" id="divError">
+            <p id="pesanError"></p>
+          </div>
+
+          <form name="formPublikasi" action="page09C_action.php" method="post"
+          onsubmit="return validate09C()" enctype="multipart/form-data" class="publikasi-form">
+            <div class="form-group">
+              <label for="no" class="form-label">Nomor Urut</label>
+              <input type="text" id="no" name="no" class="form-input" placeholder="Masukkan nomor urut">
+            </div>
+
+            <div class="form-group">
+              <label for="judul" class="form-label">Judul Publikasi</label>
+              <input type="text" id="judul" name="judul" class="form-input" placeholder="Masukkan judul publikasi">
+            </div>
+
+            <div class="form-group">
+              <label for="tanggal_rilis" class="form-label">Tanggal Rilis</label>
+              <input type="date" id="tanggal_rilis" name="tanggal_rilis" class="form-input">
+            </div>
+
+            <div class="form-group">
+              <label for="sampul" class="form-label">Sampul Publikasi</label>
+              <div class="file-upload-wrapper">
+                <input type="file" id="sampul" name="sampul" class="file-input" accept="image/*">
+                <label for="sampul" class="file-label">
+                  <span class="file-text">Format yang didukung: JPG, PNG, GIF</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="form-submit">Tambah Publikasi</button>
+            </div>
+          </form>
+        </div>
       </div>
-      <main class="form-publikasi">
-        <form name="formPublikasi" action="page09C_action.php" method="post"
-        onsubmit="return validate09C()" enctype="multipart/form-data">
-          <h2>Form Tambah Publikasi Baru</h2>
-          <br>
-          <table>
-            <tr>
-              <td>Nomor:</td>
-              <td><input type="text" name="no" placeholder="Nomor urut"></td>
-            </tr>
-            <tr>
-              <td>Judul:</td>
-              <td><input type="text" name="judul" placeholder="Judul publikasi"></td>
-            </tr>
-            <tr>
-              <td>Tanggal Rilis:</td>
-              <td><input type="date" name="tanggal_rilis"></td>
-            </tr>
-            <tr>
-              <td>Sampul:</td>
-              <td><input type="file" name="sampul" accept="image/*"></td>
-            </tr>
-            <tr>
-              <td colspan="2" style="text-align: center;">
-                <input type="submit" value="Tambah">
-              </td>
-            </tr>
-          </table>
-        </form>
-      </main>
     </div>
-    <address style="position: absolute;">
-      Created by Moh. Iryawan F.
-      <a href="mailto:222413656@stis.ac.id">(222413656@stis.ac.id)</a>
-    </address>
+
+    <?php include 'footer.php'; ?>
 
   </body>
 </html>
