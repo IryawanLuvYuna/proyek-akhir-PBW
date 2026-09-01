@@ -232,7 +232,7 @@ nav a.active {
 }
 
 main {
-  padding-top: 80px;
+  padding-top: 64px;
   width: 100%;
   margin: 0 auto;
 }
@@ -578,7 +578,7 @@ address a:hover {
 }
 
 .maskot-wrapper img {
-  width: 80%;
+  width: 74%;
   max-width: none;
   height: auto;
   max-height: none;
@@ -589,8 +589,6 @@ address a:hover {
   bottom: 0;
   transform: translate(-50%, 0);
   filter: drop-shadow(0 18px 20px rgba(0, 0, 0, 0.35));
-  animation: maskotFloat 4s ease-in-out infinite;
-  animation-delay: 0.7s;
 }
 
 @keyframes maskotPopIn {
@@ -602,11 +600,6 @@ address a:hover {
     opacity: 1;
     transform: scale(1) translateY(0);
   }
-}
-
-@keyframes maskotFloat {
-  0%, 100% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, -10px); }
 }
 
 .about-strip {
@@ -1225,7 +1218,7 @@ address a:hover {
   }
   
   main {
-    padding-top: 66px;
+    padding-top: 56px;
   }
   
   .content-wrapper {

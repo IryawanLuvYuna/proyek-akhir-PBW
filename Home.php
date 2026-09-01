@@ -2,7 +2,6 @@
 include 'header.php';
 ?>
 
-<main>
   <section class="hero-full">
     <div class="hero-content">
       <div class="hero-left">
@@ -10,7 +9,8 @@ include 'header.php';
         <p>
           Badan Pusat Statistik (BPS) Provinsi Sulawesi Tengah menyediakan data
           statistik yang akurat, terpercaya, dan terkini untuk mendukung
-          pembangunan daerah dan pengambilan keputusan berbasis data.
+          pembangunan daerah dan pengambilan keputusan berbasis data dan mencapai
+          Indonesia cemas 2067.
         </p>
       </div>
       <div class="hero-right">
@@ -35,7 +35,6 @@ include 'header.php';
       <a href="https://sulteng.bps.go.id" target="_blank">Kunjungi Website Resmi</a>
     </div>
   </section>
-</main>
 
 <?php
 include 'footer.php';
