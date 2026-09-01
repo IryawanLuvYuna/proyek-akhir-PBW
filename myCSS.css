@@ -157,7 +157,7 @@ table:not(.publikasi-table) tr:nth-child(even) {
 }
 
 header {
-  background-color: var(--color-primary);
+  background-color: #002B6A;
   position: fixed;
   top: 0;
   left: 0;
@@ -221,13 +221,13 @@ nav a {
 }
 
 nav a:hover {
-  background-color: var(--color-primary-dark);
+  background-color: #003d8a;
   color: var(--color-text-white);
 }
 
 nav a.active {
   background-color: var(--color-bg-white);
-  color: var(--color-primary);
+  color: #002B6A;
   font-weight: 600;
 }
 
@@ -325,7 +325,7 @@ address {
   text-align: center;
   font-style: italic;
   font-weight: 600;
-  background-color: var(--color-primary-dark);
+  background-color: #002B6A;
   color: var(--color-text-white);
   padding: var(--spacing-lg);
   width: 100%;
@@ -798,8 +798,8 @@ address a:hover {
 }
 
 .form-input:focus {
-  border-color: #0056b3;
-  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+  border-color: #002B6A;
+  box-shadow: 0 0 0 3px rgba(0, 43, 106, 0.1);
 }
 
 .form-input::placeholder {
@@ -826,7 +826,7 @@ address a:hover {
   width: 18px;
   height: 18px;
   cursor: pointer;
-  accent-color: #0056b3;
+  accent-color: #002B6A;
 }
 
 .checkbox-text {
@@ -836,7 +836,7 @@ address a:hover {
 .login-button {
   width: 100%;
   padding: 14px 24px;
-  background-color: #0056b3;
+  background-color: #002B6A;
   color: var(--color-text-white);
   border: none;
   border-radius: var(--radius-md);
@@ -849,7 +849,7 @@ address a:hover {
 }
 
 .login-button:hover {
-  background-color: #004494;
+  background-color: #003d8a;
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
 }
@@ -922,8 +922,8 @@ address a:hover {
 }
 
 .search-input:focus {
-  border-color: #0056b3;
-  box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.1);
+  border-color: #002B6A;
+  box-shadow: 0 0 0 4px rgba(0, 43, 106, 0.1);
 }
 
 .search-input::placeholder {
@@ -933,8 +933,9 @@ address a:hover {
 .search-icon {
   position: absolute;
   right: 20px;
-  font-size: 1.2rem;
-  color: var(--color-text-light);
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
   pointer-events: none;
 }
 
@@ -953,6 +954,7 @@ address a:hover {
   max-height: 300px;
   overflow-y: auto;
   display: none;
+  border-top: 2px solid #002B6A;
 }
 
 .search-suggestions.active {
@@ -975,7 +977,7 @@ address a:hover {
 
 .search-suggestions .suggestion-item:hover {
   background-color: #e8f4fd;
-  color: #0056b3;
+  color: #002B6A;
 }
 
 /* Table Container */
@@ -995,7 +997,7 @@ address a:hover {
 }
 
 .publikasi-table thead {
-  background-color: #0056b3;
+  background-color: #002B6A;
 }
 
 .publikasi-table thead th {
@@ -1006,7 +1008,7 @@ address a:hover {
   color: var(--color-text-white);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  border-bottom: 2px solid #004494;
+  border-bottom: 2px solid #001a45;
 }
 
 .publikasi-table tbody tr {
@@ -1146,7 +1148,8 @@ address a:hover {
 
   .search-icon {
     right: 16px;
-    font-size: 1rem;
+    width: 18px;
+    height: 18px;
   }
 
   .publikasi-table thead th,

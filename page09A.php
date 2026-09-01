@@ -30,7 +30,7 @@
           <form action="" class="search-form">
             <div class="search-wrapper">
               <input type="text" id="txt1" class="search-input" placeholder="Cari judul publikasi..." onkeyup="showHint(this.value)">
-              <span class="search-icon">🔍</span>
+              <img src="aset/kaca_pembesar.png" alt="Search" class="search-icon">
             </div>
           </form>
           <div id="txtHint" class="search-suggestions"></div>
