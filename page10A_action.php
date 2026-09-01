@@ -17,10 +17,11 @@
 
       // 3. Jika hasil query tidak ada (username tidak ditemukan di database)
       if (!$user) {
-          echo "<script>
-                  alert('Username/Password Tidak Ditemukan');
-                  window.location.href = 'page10A.php';
-                </script>";
+          $_SESSION['toast'] = [
+              'type' => 'error',
+              'message' => 'Username/Password Tidak Ditemukan'
+          ];
+          header("Location: page10A.php");
           exit();
       }
 
@@ -30,22 +31,31 @@
           $_SESSION['login'] = true;
           $_SESSION['username'] = $user['username'];
 
+          // Simpan pesan toast ke session
+          $_SESSION['toast'] = [
+              'type' => 'success',
+              'message' => 'Login Berhasil!'
+          ];
+          
           // Arahkan ke halaman utama/daftar publikasi (page09A.php)
-          echo "<script>
-                  alert('Login Berhasil!');
-                  window.location.href = 'Home.php';
-                </script>";
+          header("Location: Home.php");
           exit();
       } else {
           // Jika password salah
-          echo "<script>
-                  alert('Username/Password salah');
-                  window.location.href = 'page10A.php';
-                </script>";
+          $_SESSION['toast'] = [
+              'type' => 'error',
+              'message' => 'Username/Password salah'
+          ];
+          header("Location: page10A.php");
           exit();
       }
 
   } catch (PDOException $e) {
-      exit("PDO Error: " . $e->getMessage() . "<br>");
+      $_SESSION['toast'] = [
+          'type' => 'error',
+          'message' => 'Error: ' . $e->getMessage()
+      ];
+      header("Location: page10A.php");
+      exit();
   }
 ?>

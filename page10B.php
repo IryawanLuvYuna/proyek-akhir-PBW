@@ -14,10 +14,12 @@
   // 4. Hancurkan seluruh data session yang tersimpan di server
   session_destroy();
 
-  // 5. Tampilkan alert notifikasi dan redirect kembali ke halaman login (page10A.php)
-  echo "<script>
-          alert('Anda telah berhasil logout.');
-          window.location.href = 'page10A.php';
-        </script>";
+  // 5. Simpan pesan toast ke session dan redirect ke halaman login
+  $_SESSION['toast'] = [
+      'type' => 'info',
+      'message' => 'Anda telah berhasil logout'
+  ];
+  
+  header("Location: page10A.php");
   exit();
 ?>

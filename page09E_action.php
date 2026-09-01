@@ -1,5 +1,6 @@
 <!-- LOGIKA EDIT -->
 <?php
+  session_start();
   include 'dbconn.php';
   try {
       $no = $_POST['no'];
@@ -23,15 +24,23 @@
                   WHERE no = '$no'";
       }
       $result = $pdo->query($sql);
-      echo "
-          <script>
-            alert('Data Berhasil Ditambahkan');
-            // 2. JavaScript untuk Redirect Halaman
-            window.location.href = 'page09A.php';
-          </script>
-      ";
+      
+      // Simpan pesan toast ke session
+      $_SESSION['toast'] = [
+          'type' => 'success',
+          'message' => 'Data Berhasil Diupdate'
+      ];
+      
+      header("Location: page09A.php");
+      exit();
+      
       $pdo = NULL;
   } catch (PDOException $e) {
-      exit("PDO Error: " . $e->getMessage() . "<br>");
+      $_SESSION['toast'] = [
+          'type' => 'error',
+          'message' => 'Error: ' . $e->getMessage()
+      ];
+      header("Location: page09A.php");
+      exit();
   }
 ?>

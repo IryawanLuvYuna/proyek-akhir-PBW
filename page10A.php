@@ -1,9 +1,22 @@
 <!-- LOGIN PAGE (LANDING PAGE) -->
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+?>
 <!DOCTYPE html>
 <html>
   <head>
   <title>Login - BPS Provinsi Sulawesi Tengah</title>
   <link rel="stylesheet" href="myCSS.css">
+  <?php
+  if (isset($_SESSION['toast'])) {
+    $toastData = htmlspecialchars(json_encode($_SESSION['toast']));
+    echo '<meta name="toast-data" content="' . $toastData . '">';
+    unset($_SESSION['toast']);
+  }
+  ?>
+  <script src="toast.js"></script>
   </head>
   <body class="login-page">
     <div class="login-container">
