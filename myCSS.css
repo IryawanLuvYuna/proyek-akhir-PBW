@@ -977,7 +977,7 @@ address a:hover {
 
 .search-input {
   width: 100%;
-  padding: 14px 50px 14px 20px;
+  padding: 14px 60px 14px 20px;
   border: 2px solid #e5e7eb;
   border-radius: 25px;
   font-size: 1rem;
@@ -1003,6 +1003,30 @@ address a:hover {
   width: 20px;
   height: 20px;
   object-fit: contain;
+  pointer-events: none;
+}
+
+.search-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color var(--transition-fast);
+}
+
+.search-button:hover {
+  background-color: rgba(0, 43, 106, 0.1);
+}
+
+.search-button .search-icon {
+  position: static;
+  width: 20px;
+  height: 20px;
   pointer-events: none;
 }
 
@@ -1054,6 +1078,16 @@ address a:hover {
   box-shadow: var(--shadow-md);
   overflow: hidden;
   border: 1px solid #e5e7eb;
+}
+
+/* No Results Message */
+.no-results {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
 }
 
 /* Publikasi Table Styling */
@@ -1640,8 +1674,11 @@ address a:hover {
     font-size: 0.9rem;
   }
 
-  .search-icon {
-    right: 16px;
+  .search-button {
+    right: 8px;
+  }
+
+  .search-button .search-icon {
     width: 18px;
     height: 18px;
   }

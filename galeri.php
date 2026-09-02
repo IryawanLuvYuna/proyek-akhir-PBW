@@ -1,26 +1,9 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="myCSS.css">
-  <title>Galeri Kegiatan BPS Sulawesi Tengah</title>
-</head>
-<body>
-  <header>
-    <div class="header-left">
-      <img src="aset/logo.png" alt="Logo Web">
-      <div class="judulweb">BPS PROVINSI SULAWESI TENGAH</div>
-    </div>
-
-    <nav>
-      <a href="Home.php">Home</a>
-      <a href="page09A.php">Daftar Publikasi</a>
-      <a href="page09C.php">Tambah Publikasi</a>
-      <a class="active" href="galeri.php">Galeri Kegiatan</a>
-      <a href="page10B.php">Logout</a>
-    </nav>
-  </header>
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+include 'header.php';
+?>
 
   <div class="gallery-section">
     <h2>Galeri Kegiatan</h2>
@@ -70,10 +53,6 @@
     </div>
   </div>
 
-  <address style="position: relative;">
-      Created by Moh. Iryawan F.
-      <a href="mailto:222413656@stis.ac.id">(222413656@stis.ac.id)</a>
-    </address>
   <script>
     const thumbs = document.querySelectorAll('.thumb');
     const previewImg = document.getElementById('previewImg');
@@ -95,5 +74,6 @@
     });
   </script>
 
-</body>
-</html>
+<?php
+include 'footer.php';
+?>

@@ -25,6 +25,11 @@ function showHint(str) {
             searchInput.value = this.textContent;
             hintBox.innerHTML = "";
             hintBox.classList.remove("active");
+            // Submit form untuk melakukan search
+            const searchForm = document.querySelector('.search-form');
+            if (searchForm) {
+              searchForm.submit();
+            }
           }
         });
       });

@@ -14,10 +14,14 @@
         <h1 class="publikasi-title">Daftar Publikasi BPS Provinsi Sulawesi Tengah</h1>
 
         <div class="search-container">
-          <form action="" class="search-form">
+          <form action="page09A.php" method="GET" class="search-form">
             <div class="search-wrapper">
-              <input type="text" id="txt1" class="search-input" placeholder="Cari judul publikasi..." onkeyup="showHint(this.value)">
-              <img src="aset/kaca_pembesar.png" alt="Search" class="search-icon">
+              <input type="text" id="txt1" name="search" class="search-input" placeholder="Cari judul publikasi..." 
+                     value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>" 
+                     onkeyup="showHint(this.value)">
+              <button type="submit" class="search-button">
+                <img src="aset/kaca_pembesar.png" alt="Search" class="search-icon">
+              </button>
             </div>
           </form>
           <div id="txtHint" class="search-suggestions"></div>
@@ -37,8 +41,24 @@
             <tbody>
         <?php
         include 'dbconn.php';
-        $result = $pdo->query("select * from publikasi order by no");
+        
+        // Cek apakah ada parameter search
+        $search = isset($_GET['search']) ? $_GET['search'] : '';
+        
+        if (!empty($search)) {
+            // Gunakan query dengan LIKE untuk pencarian
+            $sql = "SELECT * FROM publikasi WHERE judul LIKE ? ORDER BY no";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute(["%" . $search . "%"]);
+            $result = $stmt;
+        } else {
+            // Tampilkan semua data jika tidak ada search
+            $result = $pdo->query("SELECT * FROM publikasi ORDER BY no");
+        }
+        
+        $hasResults = false;
         foreach ($result as $row) {
+            $hasResults = true;
             echo "<tr>";
             echo "  <td>" . $row['no'] . "</td>";
             echo "  <td>" . $row['judul'] . "</td>";
@@ -58,6 +78,13 @@
                     <img src='aset/trash_bin.png' alt='Hapus' class='action-icon-img'>
                     </a>
                     </td>";
+            echo "</tr>";
+        }
+        
+        // Tampilkan pesan jika tidak ada hasil
+        if (!$hasResults) {
+            echo "<tr>";
+            echo "  <td colspan='5' class='no-results'>Tidak ada judul publikasi yang ditemukan</td>";
             echo "</tr>";
         }
         ?>

@@ -2,6 +2,8 @@
 if (session_status() === PHP_SESSION_NONE) {
   session_start();
 }
+// Mendapatkan nama file halaman saat ini
+$current_page = basename($_SERVER['PHP_SELF']);
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,10 +28,10 @@ if (session_status() === PHP_SESSION_NONE) {
     </div>
 
       <nav>
-        <a href="Home.php">Home</a>
-        <a href="page09A.php">Daftar Publikasi</a>
-        <a href="page09C.php">Tambah Publikasi</a>
-        <a href="galeri.php">Galeri Kegiatan</a>
+        <a href="Home.php" class="<?php echo $current_page == 'Home.php' ? 'active' : ''; ?>">Home</a>
+        <a href="page09A.php" class="<?php echo $current_page == 'page09A.php' ? 'active' : ''; ?>">Daftar Publikasi</a>
+        <a href="page09C.php" class="<?php echo $current_page == 'page09C.php' ? 'active' : ''; ?>">Tambah Publikasi</a>
+        <a href="galeri.php" class="<?php echo $current_page == 'galeri.php' ? 'active' : ''; ?>">Galeri Kegiatan</a>
         <a href="page10B.php">Logout</a>
       </nav>
     </header>
