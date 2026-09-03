@@ -1,6 +1,11 @@
 <!-- LOGIKA DELETE -->
 <?php
   session_start();
+  // Proteksi: Redirect ke login jika belum login
+  if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
+    header("Location: page10A.php");
+    exit();
+  }
   include 'dbconn.php';
   try {
       $no = $_GET['no'];

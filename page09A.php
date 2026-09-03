@@ -1,4 +1,14 @@
 <!-- PAGE UNTUK DAFTAR PUBLIKASI -->
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+// Proteksi: Redirect ke login jika belum login
+if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
+  header("Location: page10A.php");
+  exit();
+}
+?>
 <!DOCTYPE html>
 <html>
   <head>

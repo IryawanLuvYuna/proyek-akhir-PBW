@@ -1,5 +1,11 @@
 <!-- LOGIKA UTK AMBIL JUDUL DARI DATABASE -->
 <?php
+  session_start();
+  // Proteksi: Return error jika belum login
+  if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
+    echo "";
+    exit();
+  }
   include 'dbconn.php';
   try {
     //Code 6
@@ -15,9 +21,6 @@
       foreach($stmt as $row) {
         echo "<div class='suggestion-item'>" . htmlspecialchars($row["judul"]) . "</div>";
       }
-    }
-    else {
-      echo "<div class='suggestion-item'>Tidak ada saran</div>";
     }
     $pdo = NULL;
 
